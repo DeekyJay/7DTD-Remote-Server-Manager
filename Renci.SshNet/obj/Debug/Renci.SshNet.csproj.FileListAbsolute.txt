@@ -1,0 +1,1 @@
+C:\Users\Jeremy\Documents\Visual Studio 2013\Projects\7DTD Remote Server Manager\Renci.SshNet\obj\Debug\Renci.SshNet.csprojResolveAssemblyReference.cache

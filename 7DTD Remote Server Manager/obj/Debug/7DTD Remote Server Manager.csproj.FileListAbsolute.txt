@@ -1,0 +1,11 @@
+c:\users\jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\bin\Debug\7DTD Remote Server Manager.exe.config
+c:\users\jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\bin\Debug\7DTD Remote Server Manager.exe
+c:\users\jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\bin\Debug\7DTD Remote Server Manager.pdb
+c:\users\jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\obj\Debug\7DTD Remote Server Manager.csprojResolveAssemblyReference.cache
+c:\users\jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\obj\Debug\_7DTD_Remote_Server_Manager.Properties.Resources.resources
+c:\users\jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\obj\Debug\_7DTD_Remote_Server_Manager.RemoteServerWindow.resources
+c:\users\jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\obj\Debug\7DTD Remote Server Manager.csproj.GenerateResource.Cache
+c:\users\jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\obj\Debug\7DTD Remote Server Manager.exe
+c:\users\jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\obj\Debug\7DTD Remote Server Manager.pdb
+c:\users\jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\bin\Debug\Renci.SshNet.dll
+c:\users\jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\bin\Debug\Renci.SshNet.xml
