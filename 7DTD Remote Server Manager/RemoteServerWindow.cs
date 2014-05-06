@@ -18,15 +18,19 @@ namespace _7DTD_Remote_Server_Manager
 {
     public partial class RemoteServerWindow : Form
     {
+        string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "7DTD Server Manager");
+        string filename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "7DTD Server Manager/user.conf");
         public RemoteServerWindow()
         {
             InitializeComponent();
 
-            if (File.Exists("user.conf"))
+            Directory.CreateDirectory(path);
+
+            if (File.Exists(filename))
             {
                 this.chkCredentials.Checked = true;
 
-                string infoLine = File.ReadAllText("user.conf");
+                string infoLine = File.ReadAllText(filename);
 
                 string[] info = infoLine.Split(',');
 
@@ -42,7 +46,47 @@ namespace _7DTD_Remote_Server_Manager
                 decryptedPass = null;
                 decryptedTelnetPass = null;
             }
-            
+
+            List<SpawnEntity> se = new List<SpawnEntity>();
+
+            se.Add(new SpawnEntity("Zombie 04", 1));
+            se.Add(new SpawnEntity("Zombie 05", 2));
+            se.Add(new SpawnEntity("Zombie 06", 3));
+            se.Add(new SpawnEntity("Zombie 07", 4));
+            se.Add(new SpawnEntity("Zombie Crawler", 5));
+            se.Add(new SpawnEntity("Snow Zombie 01", 6));
+            se.Add(new SpawnEntity("Snow Zombie 02", 7));
+            se.Add(new SpawnEntity("Snow Zombie 03", 8));
+            se.Add(new SpawnEntity("Spider Zombie", 9));
+            se.Add(new SpawnEntity("Burnt Zombie", 10));
+            se.Add(new SpawnEntity("Zombie Gal 01", 11));
+            se.Add(new SpawnEntity("Zombie Gal 02", 12));
+            se.Add(new SpawnEntity("Zombie Gal 03", 13));
+            se.Add(new SpawnEntity("Zombie Gal 04", 14));
+            se.Add(new SpawnEntity("Zombie 02", 15));
+            se.Add(new SpawnEntity("Fat Zombie Cop", 16));
+            se.Add(new SpawnEntity("Fat Zombie", 17));
+            se.Add(new SpawnEntity("Hornet", 18));
+            se.Add(new SpawnEntity("Zombie Dog", 19));
+            se.Add(new SpawnEntity("Blue Car", 20));
+            se.Add(new SpawnEntity("Orange Car", 21));
+            se.Add(new SpawnEntity("Red Car", 22));
+            se.Add(new SpawnEntity("White Car", 23));
+            se.Add(new SpawnEntity("Stag (Deer)", 24));
+            se.Add(new SpawnEntity("Rabbit", 25));
+            se.Add(new SpawnEntity("Pig", 26));
+            se.Add(new SpawnEntity("Melee Weapons", 27));
+            se.Add(new SpawnEntity("Food", 28));
+            se.Add(new SpawnEntity("Building Supplies", 29));
+            se.Add(new SpawnEntity("Ranged Weapons", 30));
+            se.Add(new SpawnEntity("Ranged Weapons Day 5", 31));
+            se.Add(new SpawnEntity("Ranged Weapons Day 7", 32));
+            se.Add(new SpawnEntity("Explosives", 33));
+            se.Add(new SpawnEntity("General", 34));
+
+            cboItems.DataSource = se;
+            cboItems.DisplayMember = "entityName";
+            cboItems.ValueMember = "entityID";
 
         }
 
@@ -119,7 +163,7 @@ namespace _7DTD_Remote_Server_Manager
         {
             if (!chkCredentials.Checked)
             {
-                File.Delete("user.conf");
+                File.Delete(filename);
             }
 
             if (chkCredentials.Checked)
@@ -138,7 +182,7 @@ namespace _7DTD_Remote_Server_Manager
                     string encryptPass = Encrypt(sPass, sCode);
                     string encryptTelnetPass = Encrypt(s7DTDPass, sCode);
 
-                    System.IO.File.WriteAllText("user.conf", sAddress + "," + sUser + "," + sCode + "," + encryptPass + "," + encryptTelnetPass + "," + sTelnetPort);
+                    System.IO.File.WriteAllText(filename, sAddress + "," + sUser + "," + sCode + "," + encryptPass + "," + encryptTelnetPass + "," + sTelnetPort);
 
                     sPass = null;
                     encryptPass = null;
@@ -284,6 +328,16 @@ namespace _7DTD_Remote_Server_Manager
 
             this.btnTelnetConnect.Enabled = true;
             this.grpServerCommands.Enabled = false;
+        }
+
+        private void btnHorde_Click(object sender, EventArgs e)
+        {
+            UserConfig.tnet.WriteLine("spawnwanderinghorde");
+        }
+
+        private void btnSpawnEntity_Click(object sender, EventArgs e)
+        {
+            UserConfig.tnet.WriteLine("se " + txtPlayerNum.Text + " " + cboItems.SelectedValue);
         }
     }
 }

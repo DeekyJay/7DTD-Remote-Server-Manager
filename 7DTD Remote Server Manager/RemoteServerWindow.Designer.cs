@@ -48,6 +48,11 @@
             this.btnKillServer = new System.Windows.Forms.Button();
             this.btnStartServer = new System.Windows.Forms.Button();
             this.grpServerCommands = new System.Windows.Forms.GroupBox();
+            this.cboItems = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtPlayerNum = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnHorde = new System.Windows.Forms.Button();
             this.btnTelnetExit = new System.Windows.Forms.Button();
             this.btnTelnetShutdown = new System.Windows.Forms.Button();
             this.txtSay = new System.Windows.Forms.TextBox();
@@ -56,6 +61,7 @@
             this.txtSetTime = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSetTime = new System.Windows.Forms.Button();
+            this.btnSpawnEntity = new System.Windows.Forms.Button();
             this.grpLogin.SuspendLayout();
             this.grpSSHCommands.SuspendLayout();
             this.grpServerCommands.SuspendLayout();
@@ -211,9 +217,9 @@
             // btnDisconnect
             // 
             this.btnDisconnect.Enabled = false;
-            this.btnDisconnect.Location = new System.Drawing.Point(63, 79);
+            this.btnDisconnect.Location = new System.Drawing.Point(230, 39);
             this.btnDisconnect.Name = "btnDisconnect";
-            this.btnDisconnect.Size = new System.Drawing.Size(104, 23);
+            this.btnDisconnect.Size = new System.Drawing.Size(73, 23);
             this.btnDisconnect.TabIndex = 2;
             this.btnDisconnect.Text = "Disconnect";
             this.btnDisconnect.UseVisualStyleBackColor = true;
@@ -225,9 +231,9 @@
             this.grpSSHCommands.Controls.Add(this.btnStartServer);
             this.grpSSHCommands.Controls.Add(this.btnDisconnect);
             this.grpSSHCommands.Enabled = false;
-            this.grpSSHCommands.Location = new System.Drawing.Point(12, 247);
+            this.grpSSHCommands.Location = new System.Drawing.Point(248, 144);
             this.grpSSHCommands.Name = "grpSSHCommands";
-            this.grpSSHCommands.Size = new System.Drawing.Size(230, 115);
+            this.grpSSHCommands.Size = new System.Drawing.Size(318, 97);
             this.grpSSHCommands.TabIndex = 3;
             this.grpSSHCommands.TabStop = false;
             this.grpSSHCommands.Text = "SSH Commands";
@@ -235,7 +241,7 @@
             // btnKillServer
             // 
             this.btnKillServer.Enabled = false;
-            this.btnKillServer.Location = new System.Drawing.Point(63, 50);
+            this.btnKillServer.Location = new System.Drawing.Point(120, 39);
             this.btnKillServer.Name = "btnKillServer";
             this.btnKillServer.Size = new System.Drawing.Size(104, 23);
             this.btnKillServer.TabIndex = 5;
@@ -246,7 +252,7 @@
             // btnStartServer
             // 
             this.btnStartServer.Enabled = false;
-            this.btnStartServer.Location = new System.Drawing.Point(63, 21);
+            this.btnStartServer.Location = new System.Drawing.Point(10, 39);
             this.btnStartServer.Name = "btnStartServer";
             this.btnStartServer.Size = new System.Drawing.Size(104, 23);
             this.btnStartServer.TabIndex = 4;
@@ -256,6 +262,12 @@
             // 
             // grpServerCommands
             // 
+            this.grpServerCommands.Controls.Add(this.btnSpawnEntity);
+            this.grpServerCommands.Controls.Add(this.cboItems);
+            this.grpServerCommands.Controls.Add(this.label9);
+            this.grpServerCommands.Controls.Add(this.txtPlayerNum);
+            this.grpServerCommands.Controls.Add(this.label7);
+            this.grpServerCommands.Controls.Add(this.btnHorde);
             this.grpServerCommands.Controls.Add(this.btnTelnetExit);
             this.grpServerCommands.Controls.Add(this.btnTelnetShutdown);
             this.grpServerCommands.Controls.Add(this.txtSay);
@@ -267,14 +279,57 @@
             this.grpServerCommands.Enabled = false;
             this.grpServerCommands.Location = new System.Drawing.Point(248, 12);
             this.grpServerCommands.Name = "grpServerCommands";
-            this.grpServerCommands.Size = new System.Drawing.Size(318, 350);
+            this.grpServerCommands.Size = new System.Drawing.Size(318, 126);
             this.grpServerCommands.TabIndex = 4;
             this.grpServerCommands.TabStop = false;
             this.grpServerCommands.Text = "Server Commands";
             // 
+            // cboItems
+            // 
+            this.cboItems.FormattingEnabled = true;
+            this.cboItems.Location = new System.Drawing.Point(126, 65);
+            this.cboItems.Name = "cboItems";
+            this.cboItems.Size = new System.Drawing.Size(94, 21);
+            this.cboItems.TabIndex = 20;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(90, 69);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Item:";
+            // 
+            // txtPlayerNum
+            // 
+            this.txtPlayerNum.Location = new System.Drawing.Point(45, 66);
+            this.txtPlayerNum.Name = "txtPlayerNum";
+            this.txtPlayerNum.Size = new System.Drawing.Size(38, 20);
+            this.txtPlayerNum.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 69);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(24, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "P#:";
+            // 
+            // btnHorde
+            // 
+            this.btnHorde.Location = new System.Drawing.Point(10, 92);
+            this.btnHorde.Name = "btnHorde";
+            this.btnHorde.Size = new System.Drawing.Size(77, 23);
+            this.btnHorde.TabIndex = 16;
+            this.btnHorde.Text = "Horde";
+            this.btnHorde.UseVisualStyleBackColor = false;
+            this.btnHorde.Click += new System.EventHandler(this.btnHorde_Click);
+            // 
             // btnTelnetExit
             // 
-            this.btnTelnetExit.Location = new System.Drawing.Point(92, 67);
+            this.btnTelnetExit.Location = new System.Drawing.Point(93, 92);
             this.btnTelnetExit.Name = "btnTelnetExit";
             this.btnTelnetExit.Size = new System.Drawing.Size(103, 23);
             this.btnTelnetExit.TabIndex = 15;
@@ -284,7 +339,7 @@
             // 
             // btnTelnetShutdown
             // 
-            this.btnTelnetShutdown.Location = new System.Drawing.Point(201, 67);
+            this.btnTelnetShutdown.Location = new System.Drawing.Point(202, 92);
             this.btnTelnetShutdown.Name = "btnTelnetShutdown";
             this.btnTelnetShutdown.Size = new System.Drawing.Size(103, 23);
             this.btnTelnetShutdown.TabIndex = 14;
@@ -302,7 +357,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 44);
+            this.label6.Location = new System.Drawing.Point(11, 44);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(28, 13);
             this.label6.TabIndex = 10;
@@ -344,10 +399,20 @@
             this.btnSetTime.UseVisualStyleBackColor = true;
             this.btnSetTime.Click += new System.EventHandler(this.btnSetTime_Click);
             // 
+            // btnSpawnEntity
+            // 
+            this.btnSpawnEntity.Location = new System.Drawing.Point(229, 64);
+            this.btnSpawnEntity.Name = "btnSpawnEntity";
+            this.btnSpawnEntity.Size = new System.Drawing.Size(75, 23);
+            this.btnSpawnEntity.TabIndex = 21;
+            this.btnSpawnEntity.Text = "Spawn";
+            this.btnSpawnEntity.UseVisualStyleBackColor = true;
+            this.btnSpawnEntity.Click += new System.EventHandler(this.btnSpawnEntity_Click);
+            // 
             // RemoteServerWindow
             // 
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(580, 371);
+            this.ClientSize = new System.Drawing.Size(580, 250);
             this.Controls.Add(this.grpServerCommands);
             this.Controls.Add(this.grpSSHCommands);
             this.Controls.Add(this.grpLogin);
@@ -394,6 +459,12 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnTelnetShutdown;
         private System.Windows.Forms.Button btnTelnetExit;
+        private System.Windows.Forms.Button btnHorde;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtPlayerNum;
+        private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.ComboBox cboItems;
+        private System.Windows.Forms.Button btnSpawnEntity;
 
     }
 }
