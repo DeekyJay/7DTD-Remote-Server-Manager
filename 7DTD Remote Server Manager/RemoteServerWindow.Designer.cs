@@ -417,8 +417,10 @@
             this.Controls.Add(this.grpSSHCommands);
             this.Controls.Add(this.grpLogin);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(596, 289);
+            this.MinimumSize = new System.Drawing.Size(596, 289);
             this.Name = "RemoteServerWindow";
-            this.Text = "7DTD Remote Server Manager";
+            this.Text = "7DTD Remote Server Manager v0.3";
             this.grpLogin.ResumeLayout(false);
             this.grpLogin.PerformLayout();
             this.grpSSHCommands.ResumeLayout(false);
