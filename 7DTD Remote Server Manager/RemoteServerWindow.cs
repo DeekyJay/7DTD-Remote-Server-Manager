@@ -261,17 +261,7 @@ namespace _7DTD_Remote_Server_Manager
         {
             UserConfig.tnet.WriteLine("say " + this.txtSay.Text);
         }
-
-        private void listPlayers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listPlayers.SelectedIndex != -1)
-            {
-                listPlayers.Text = listPlayers.SelectedValue.ToString();
-                // If we also wanted to get the displayed text we could use 
-                // the SelectedItem item property: 
-            }
-            
-        }
+   
 
         private void btnTelnetShutdown_Click(object sender, EventArgs e)
         {

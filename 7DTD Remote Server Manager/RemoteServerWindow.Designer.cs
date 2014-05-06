@@ -50,17 +50,9 @@
             this.grpServerCommands = new System.Windows.Forms.GroupBox();
             this.btnTelnetExit = new System.Windows.Forms.Button();
             this.btnTelnetShutdown = new System.Windows.Forms.Button();
-            this.txtPermission = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtSay = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.btnAdmin = new System.Windows.Forms.Button();
-            this.btnMod = new System.Windows.Forms.Button();
-            this.btnBan = new System.Windows.Forms.Button();
-            this.btnKick = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.listPlayers = new System.Windows.Forms.ListBox();
             this.txtSetTime = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSetTime = new System.Windows.Forms.Button();
@@ -266,17 +258,9 @@
             // 
             this.grpServerCommands.Controls.Add(this.btnTelnetExit);
             this.grpServerCommands.Controls.Add(this.btnTelnetShutdown);
-            this.grpServerCommands.Controls.Add(this.txtPermission);
-            this.grpServerCommands.Controls.Add(this.label9);
             this.grpServerCommands.Controls.Add(this.txtSay);
             this.grpServerCommands.Controls.Add(this.label6);
             this.grpServerCommands.Controls.Add(this.button5);
-            this.grpServerCommands.Controls.Add(this.btnAdmin);
-            this.grpServerCommands.Controls.Add(this.btnMod);
-            this.grpServerCommands.Controls.Add(this.btnBan);
-            this.grpServerCommands.Controls.Add(this.btnKick);
-            this.grpServerCommands.Controls.Add(this.label7);
-            this.grpServerCommands.Controls.Add(this.listPlayers);
             this.grpServerCommands.Controls.Add(this.txtSetTime);
             this.grpServerCommands.Controls.Add(this.label5);
             this.grpServerCommands.Controls.Add(this.btnSetTime);
@@ -308,22 +292,6 @@
             this.btnTelnetShutdown.UseVisualStyleBackColor = true;
             this.btnTelnetShutdown.Click += new System.EventHandler(this.btnTelnetShutdown_Click);
             // 
-            // txtPermission
-            // 
-            this.txtPermission.Location = new System.Drawing.Point(229, 240);
-            this.txtPermission.Name = "txtPermission";
-            this.txtPermission.Size = new System.Drawing.Size(75, 20);
-            this.txtPermission.TabIndex = 13;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(226, 223);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Permission Level";
-            // 
             // txtSay
             // 
             this.txtSay.Location = new System.Drawing.Point(45, 41);
@@ -349,60 +317,6 @@
             this.button5.Text = "Send";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.btnSay_Click);
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Location = new System.Drawing.Point(229, 293);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(75, 23);
-            this.btnAdmin.TabIndex = 8;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            // 
-            // btnMod
-            // 
-            this.btnMod.Location = new System.Drawing.Point(229, 266);
-            this.btnMod.Name = "btnMod";
-            this.btnMod.Size = new System.Drawing.Size(75, 23);
-            this.btnMod.TabIndex = 7;
-            this.btnMod.Text = "Mod";
-            this.btnMod.UseVisualStyleBackColor = true;
-            // 
-            // btnBan
-            // 
-            this.btnBan.Location = new System.Drawing.Point(145, 194);
-            this.btnBan.Name = "btnBan";
-            this.btnBan.Size = new System.Drawing.Size(75, 23);
-            this.btnBan.TabIndex = 6;
-            this.btnBan.Text = "Ban";
-            this.btnBan.UseVisualStyleBackColor = true;
-            // 
-            // btnKick
-            // 
-            this.btnKick.Location = new System.Drawing.Point(64, 194);
-            this.btnKick.Name = "btnKick";
-            this.btnKick.Size = new System.Drawing.Size(75, 23);
-            this.btnKick.TabIndex = 5;
-            this.btnKick.Text = "Kick";
-            this.btnKick.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 207);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Player List";
-            // 
-            // listPlayers
-            // 
-            this.listPlayers.Location = new System.Drawing.Point(6, 223);
-            this.listPlayers.Name = "listPlayers";
-            this.listPlayers.Size = new System.Drawing.Size(214, 121);
-            this.listPlayers.Sorted = true;
-            this.listPlayers.TabIndex = 3;
-            this.listPlayers.SelectedIndexChanged += new System.EventHandler(this.listPlayers_SelectedIndexChanged);
             // 
             // txtSetTime
             // 
@@ -473,19 +387,11 @@
         private System.Windows.Forms.Button btnTelnetConnect;
         private System.Windows.Forms.TextBox txtTelnetPass;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        public System.Windows.Forms.ListBox listPlayers;
         private System.Windows.Forms.TextBox txtTelnetPort;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtPermission;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtSay;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button btnAdmin;
-        private System.Windows.Forms.Button btnMod;
-        private System.Windows.Forms.Button btnBan;
-        private System.Windows.Forms.Button btnKick;
         private System.Windows.Forms.Button btnTelnetShutdown;
         private System.Windows.Forms.Button btnTelnetExit;
 
