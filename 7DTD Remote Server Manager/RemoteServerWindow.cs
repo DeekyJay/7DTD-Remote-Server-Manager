@@ -230,11 +230,6 @@ namespace _7DTD_Remote_Server_Manager
                     this.btnTelnetConnect.Enabled = false;
                     this.btnDisconnect.Enabled = true;
                     this.grpServerCommands.Enabled = true;
-
-                    PlayerList pl = new PlayerList();
-                    Thread plWorker = new Thread(pl.PopulateList);
-
-                    plWorker.Start();
                 }
                 else
                 {
