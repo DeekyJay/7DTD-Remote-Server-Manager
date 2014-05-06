@@ -8,3 +8,4 @@ C:\Users\Jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager
 C:\Users\Jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\obj\Release\7DTD Remote Server Manager.csproj.GenerateResource.Cache
 C:\Users\Jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\obj\Release\7DTD Remote Server Manager.exe
 C:\Users\Jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\obj\Release\7DTD Remote Server Manager.pdb
+C:\Users\Jeremy\documents\visual studio 2013\Projects\7DTD Remote Server Manager\7DTD Remote Server Manager\obj\Release\7DTD Remote Server Manager.csprojResolveAssemblyReference.cache

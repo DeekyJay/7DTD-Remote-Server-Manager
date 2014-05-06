@@ -10,7 +10,7 @@ namespace _7DTD_Remote_Server_Manager
     class PlayerList : RemoteServerWindow
     {
 
-        List<Player> lPlayers;
+        public List<Player> lPlayers;
 
         public void PopulateList()
         {
@@ -80,11 +80,9 @@ namespace _7DTD_Remote_Server_Manager
         public void refreshData()
         {
             listPlayers.DataSource = null;
-
-            listPlayers.DisplayMember = "userID";
-            listPlayers.ValueMember = "sName";
-
             listPlayers.DataSource = lPlayers;
+            listPlayers.DisplayMember = "sName";
+            listPlayers.ValueMember = "userID";
         }
     }
 }

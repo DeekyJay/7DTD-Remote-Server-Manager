@@ -8,8 +8,8 @@ namespace _7DTD_Remote_Server_Manager
 {
     class Player
     {
-        protected string sName { get; set; }
-        protected int userID { get; set; }
+        public string sName { get; set; }
+        public int userID { get; set; }
 
         public Player(string sName, int userID)
         {
@@ -19,7 +19,7 @@ namespace _7DTD_Remote_Server_Manager
 
         public override string ToString()
         {
-            return "ID: " + this.userID + ", Name: " + this.sName; 
+            return this.sName;
         }
     }
 }
