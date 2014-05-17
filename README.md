@@ -3,6 +3,8 @@ The info provided on this wiki will cover installation, sources, FAQ, and genera
 
 7DTD Remote Server Manager is exactly what the title says it is! It allows you to manage your 7 Days to Die Dedicated Server under the assumption that you are using the hacky method for installation on linux and follow the general set up, without going your own route.
 
+Meaning, you followed this guide: http://7daystodie.gamepedia.com/Linux_Server
+
 Note: Later revisions will allow you to configure what scripts you can call with the commands, just because I understand that not everyone installed the hacky linux version properly.
 
 Later on, I would like to redesign this to have a more modern/metro look to it.
