@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoteServerWindow));
             this.label1 = new System.Windows.Forms.Label();
             this.grpLogin = new System.Windows.Forms.GroupBox();
             this.btnTelnetConnect = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@
             this.btnKillServer = new System.Windows.Forms.Button();
             this.btnStartServer = new System.Windows.Forms.Button();
             this.grpServerCommands = new System.Windows.Forms.GroupBox();
+            this.btnSpawnEntity = new System.Windows.Forms.Button();
             this.cboItems = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtPlayerNum = new System.Windows.Forms.TextBox();
@@ -61,7 +63,6 @@
             this.txtSetTime = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSetTime = new System.Windows.Forms.Button();
-            this.btnSpawnEntity = new System.Windows.Forms.Button();
             this.grpLogin.SuspendLayout();
             this.grpSSHCommands.SuspendLayout();
             this.grpServerCommands.SuspendLayout();
@@ -284,6 +285,16 @@
             this.grpServerCommands.TabStop = false;
             this.grpServerCommands.Text = "Server Commands";
             // 
+            // btnSpawnEntity
+            // 
+            this.btnSpawnEntity.Location = new System.Drawing.Point(229, 64);
+            this.btnSpawnEntity.Name = "btnSpawnEntity";
+            this.btnSpawnEntity.Size = new System.Drawing.Size(75, 23);
+            this.btnSpawnEntity.TabIndex = 21;
+            this.btnSpawnEntity.Text = "Spawn";
+            this.btnSpawnEntity.UseVisualStyleBackColor = true;
+            this.btnSpawnEntity.Click += new System.EventHandler(this.btnSpawnEntity_Click);
+            // 
             // cboItems
             // 
             this.cboItems.FormattingEnabled = true;
@@ -399,16 +410,6 @@
             this.btnSetTime.UseVisualStyleBackColor = true;
             this.btnSetTime.Click += new System.EventHandler(this.btnSetTime_Click);
             // 
-            // btnSpawnEntity
-            // 
-            this.btnSpawnEntity.Location = new System.Drawing.Point(229, 64);
-            this.btnSpawnEntity.Name = "btnSpawnEntity";
-            this.btnSpawnEntity.Size = new System.Drawing.Size(75, 23);
-            this.btnSpawnEntity.TabIndex = 21;
-            this.btnSpawnEntity.Text = "Spawn";
-            this.btnSpawnEntity.UseVisualStyleBackColor = true;
-            this.btnSpawnEntity.Click += new System.EventHandler(this.btnSpawnEntity_Click);
-            // 
             // RemoteServerWindow
             // 
             this.AutoSize = true;
@@ -416,6 +417,7 @@
             this.Controls.Add(this.grpServerCommands);
             this.Controls.Add(this.grpSSHCommands);
             this.Controls.Add(this.grpLogin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(596, 289);
             this.MinimumSize = new System.Drawing.Size(596, 289);
