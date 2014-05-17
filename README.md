@@ -26,7 +26,8 @@ Report Issues here: https://github.com/Leviathan5/7DTD-Remote-Server-Manager/iss
 * .NET Framework 4.5 or above
 
 ## Screenshots
-Coming Soon.
+
+http://i.imgur.com/GudVHq4.png
 
 ## FAQ
 1. I noticed this software saves my SSH and Telnet info. How secure is that?
