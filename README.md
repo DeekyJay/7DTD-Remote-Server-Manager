@@ -1,4 +1,4 @@
-# Welcome to the 7DTD Remote Server Manager Wiki!
+# 7DTD Remote Server Manager
 The info provided on this wiki will cover installation, sources, FAQ, and general instructions.
 
 7DTD Remote Server Manager is exactly what the title says it is! It allows you to manage your 7 Days to Die Dedicated Server under the assumption that you are using the hacky method for installation on linux and follow the general set up, without going your own route.
