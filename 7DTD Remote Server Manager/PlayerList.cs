@@ -10,13 +10,12 @@ namespace _7DTD_Remote_Server_Manager
     class PlayerList : RemoteServerWindow
     {
 
-        public List<Player> lPlayers;
+        public static List<Player> lPlayers;
 
         public void PopulateList()
         {
             while (true && UserConfig.tnet.IsConnected)
             {
-                refreshData();
 
                 UserConfig.tnet.WriteLine("lp");
 
@@ -73,16 +72,10 @@ namespace _7DTD_Remote_Server_Manager
                     //}
 
                     System.Threading.Thread.Sleep(5000);
+
+                    refreshData();
                 }
             }
-        }
-
-        public void refreshData()
-        {
-            listPlayers.DataSource = null;
-            listPlayers.DataSource = lPlayers;
-            listPlayers.DisplayMember = "sName";
-            listPlayers.ValueMember = "userID";
         }
     }
 }

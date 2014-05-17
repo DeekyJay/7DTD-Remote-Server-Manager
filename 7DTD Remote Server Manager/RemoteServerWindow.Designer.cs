@@ -20,6 +20,13 @@
             base.Dispose(disposing);
         }
 
+        public void refreshData()
+        {
+            listPlayers.DataSource = PlayerList.lPlayers;
+            listPlayers.DisplayMember = "sName";
+            listPlayers.ValueMember = "userID";
+        }
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -474,7 +481,7 @@
         private System.Windows.Forms.TextBox txtTelnetPass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        public System.Windows.Forms.ListBox listPlayers;
+        private System.Windows.Forms.ListBox listPlayers;
         private System.Windows.Forms.TextBox txtTelnetPort;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPermission;
