@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="7DTD Remote Server Manager.exe" version="0.3.0.0" publicKeyToken="154fa85bb6d5fb2c" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="7DTDRemoteServerManagerIcon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="7DTD Remote Server Manager" version="0.0.0.27937" language="neutral" processorArchitecture="msil" />
+    <commandLine file="7DTD Remote Server Manager.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="7DTD Remote Server Manager.exe" size="33280">
+      <assemblyIdentity name="7DTD Remote Server Manager" version="0.0.0.27937" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>FIYa5Ohcw1urxvQbtOUBxxUczxqKkzlnYTT2Xe5izEg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Renci.SshNet.dll" size="425984">
+      <assemblyIdentity name="Renci.SshNet" version="2014.4.6.0" publicKeyToken="1CEE9F8BDE3DB106" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>kD9dYdZwjC5slbvDmhGL3368jaEpuCe8hnYDNPNwgHM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="7DTD Remote Server Manager.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="7DTDRemoteServerManagerIcon.ico" size="4286">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RxMBSd0pwHQg4M+IuRyR5rmmazqte+ZDs926xGZFPgM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. 
+      Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows Vista, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- If your application is designed to work with Windows 8, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 8.1, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=DEREK-MSI\Jeremy" issuerKeyHash="fbfe6f1503169af8b546bc42045fa0f7f476b842" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>9FTattv5GFZOraYYXoRZLQE94JEjZIym97p6p3EpaGg=</DigestValue></Reference></SignedInfo><SignatureValue>cDNyArkOr+bQwnfk9wdsWK1wqKGb5j6zIPq5zhOrjb6ZAITP86GF2kNqyNCyyRi5bTc0JSzYCIrQ0LAmF/EE1uW8R5sCsdvp9DHM35+pb20/kbZyQI9wi4VI410orntZDtxiehgRN4yoGn5lF9btkh4DHe6LYKgnJS/LXf1Rp58=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>pPEvMWUBJNPNMONHuu0SqvajT8v6hiRp6ksCIPK4JJHeFAnwyhlAHAxbKJuroXn6aGQ3uRpXJnmscE3NEokYY3+4tUeQBA/M+7WZrlKiYQ/kEPcujRtkf8I41GaDJxEjpyIdmN+XHk+c5qh6Ga1sUAM549ja1d/lOTVoN3HvPvM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="68682971a77abaf7a68c642391e03d012d59845e18a6ad4e5618f9dbb6da54f4" Description="" Url=""><as:assemblyIdentity name="7DTD Remote Server Manager.exe" version="0.3.0.0" publicKeyToken="154fa85bb6d5fb2c" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DEREK-MSI\Jeremy</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>JexlCW/BFb2Q5dGJDusDwB66j2JNutIleRDGhznSGLM=</DigestValue></Reference></SignedInfo><SignatureValue>dmYNyLBdqecolDbKsvJXgZqhWY/zjHi73LKCDSHcxSNwcu99KUPSFCyV6T+NfC6BhNDLxhN4cK+cwZ3a+cJhfTS43JJbg24tTfwAjyM6/42tDA1/aBocZcEvYrI2YpJzkcUiMh+NFMMayHlwQCDb5FSqH19DQOGB8L8wJXb8gYY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>pPEvMWUBJNPNMONHuu0SqvajT8v6hiRp6ksCIPK4JJHeFAnwyhlAHAxbKJuroXn6aGQ3uRpXJnmscE3NEokYY3+4tUeQBA/M+7WZrlKiYQ/kEPcujRtkf8I41GaDJxEjpyIdmN+XHk+c5qh6Ga1sUAM549ja1d/lOTVoN3HvPvM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUKgAwIBAgIQODCDT/NrlrFASFt7WQQh5jANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDHiAARABFAFIARQBLAC0ATQBTAEkAXABKAGUAcgBlAG0AeTAeFw0xNDA1MTcyMTMxMTJaFw0xNTA1MTgwMzMxMTJaMCsxKTAnBgNVBAMeIABEAEUAUgBFAEsALQBNAFMASQBcAEoAZQByAGUAbQB5MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCk8S8xZQEk080w40e67RKq9qNPy/qGJGnqSwIg8rgkkd4UCfDKGUAcDFsom6uhefpoZDe5GlcmeaxwTc0SiRhjf7i1R5AED8z7tZmuUqJhD+QQ9y6NG2R/wjjUZoMnESOnIh2Y35ceT5zmqHoZrWxQAznj2NrV3+U5NWg3ce8+8wIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAAKr9o3tPKd2kEx4GV4VcSfnAMVHRroRR5N92p1MN8Spb8d4GkBaG3b1TCBa+7I4MdJbNftklKtG3XtlCC4uqeuqTvW9+L43MWzkaMCKNgPvjpX9EzAIvcbBL9ICzoXYv112LqB3dPFEE/wt7uwWQMgpDfKv9PIdIV42lh8zS7UI</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
