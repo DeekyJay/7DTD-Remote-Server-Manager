@@ -23,8 +23,8 @@
         public void refreshData()
         {
             listPlayers.DataSource = PlayerList.lPlayers;
-            listPlayers.DisplayMember = "sName";
-            listPlayers.ValueMember = "userID";
+            listPlayers.DisplayMember = "playerName";
+            listPlayers.ValueMember = "playerId";
         }
 
         #region Windows Form Designer generated code

@@ -33,6 +33,10 @@ namespace _7DTD_Remote_Server_Manager
                         UserConfig.tnet.WriteLine("exit");
                     }
 
+                    int end = result.IndexOf(" in the game");
+
+                    result = result.Substring(0, end);
+
                     string[] players = Regex.Split(result, ",|\n");
 
                     string[] playersFiltered = new string[(int)(players.Length / 5.5)];
@@ -71,7 +75,7 @@ namespace _7DTD_Remote_Server_Manager
                     // UserConfig.players.Add(new Player(playersFiltered[i + 1], Int32.Parse(playersFiltered[i])));
                     //}
 
-                    System.Threading.Thread.Sleep(5000);
+                    System.Threading.Thread.Sleep(10000);
 
                     refreshData();
                 }

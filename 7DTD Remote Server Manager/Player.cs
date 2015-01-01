@@ -21,5 +21,15 @@ namespace _7DTD_Remote_Server_Manager
         {
             return this.sName;
         }
+
+        public string playerName
+        {
+            get { return this.sName; }
+        }
+
+        public int playerId
+        {
+            get { return this.userID; }
+        }
     }
 }

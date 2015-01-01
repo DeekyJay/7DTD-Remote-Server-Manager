@@ -73,14 +73,14 @@ namespace _7DTD_Remote_Server_Manager
                 this.btnDisconnect.Enabled = true;
                 this.grpSSHCommands.Enabled = true;
 
-                var cmdStatus = UserConfig.client.CreateCommand("/etc/init.d/7dtd.sh status");
+                var cmdStatus = UserConfig.client.CreateCommand("7dtd.sh status MFCrew");
 
                 cmdStatus.Execute();
 
                 string result = cmdStatus.Result;
 
                 Console.Out.WriteLine(result);
-                if (result.Contains("server is running"))
+                if (result.Contains("Status: Running"))
                 {
                     this.btnStartServer.Enabled = false;
                     this.btnKillServer.Enabled = true;
@@ -187,7 +187,7 @@ namespace _7DTD_Remote_Server_Manager
 
         private void btnStartServer_Click(object sender, EventArgs e)
         {
-            var cmdRun = UserConfig.client.CreateCommand("7dtd-start.sh");
+            var cmdRun = UserConfig.client.CreateCommand("7dtd.sh start MFCrew");
 
             cmdRun.Execute();
 
@@ -202,7 +202,7 @@ namespace _7DTD_Remote_Server_Manager
 
         private void btnKillServer_Click(object sender, EventArgs e)
         {
-            var cmdKill = UserConfig.client.CreateCommand("7dtd-kill.sh");
+            var cmdKill = UserConfig.client.CreateCommand("7dtd.sh kill MFCrew");
 
             cmdKill.Execute();
 
@@ -231,6 +231,8 @@ namespace _7DTD_Remote_Server_Manager
                     this.btnDisconnect.Enabled = true;
                     this.grpServerCommands.Enabled = true;
 
+                    UserConfig.tnet.WriteLine("say 7DTD Server Manager telnet connection has been establish!");
+
                     PlayerList pl = new PlayerList();
                     Thread plWorker = new Thread(pl.PopulateList);
 
@@ -255,6 +257,7 @@ namespace _7DTD_Remote_Server_Manager
         private void btnSetTime_Click(object sender, EventArgs e)
         {
             UserConfig.tnet.WriteLine("st " + this.txtSetTime.Text);
+            UserConfig.tnet.WriteLine("say The time has been changed!");
         }
 
         private void btnSay_Click(object sender, EventArgs e)
@@ -266,7 +269,7 @@ namespace _7DTD_Remote_Server_Manager
         {
             if (listPlayers.SelectedIndex != -1)
             {
-                listPlayers.Text = listPlayers.SelectedValue.ToString();
+                //listPlayers.Text = listPlayers.SelectedValue.ToString();
                 // If we also wanted to get the displayed text we could use 
                 // the SelectedItem item property: 
             }
